@@ -1,9 +1,13 @@
 FROM python:3.5
-MAINTAINER olpi
 
 ENV PYTHONUNBUFFERED 1
 
-RUN apt-get update && apt-get install -qq -y build-essential libffi-dev python3-dev openssl
+RUN apt-get update && \
+    apt-get install -qq -y \
+        build-essential \
+        libffi-dev \
+        python3-dev \
+        openssl
 
 RUN mkdir -p /app/src
 
